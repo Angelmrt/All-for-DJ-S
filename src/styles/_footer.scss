@@ -1,0 +1,139 @@
+@use "global" as *;
+
+footer.footer-index {
+    background-color: $color-primary;
+    color: $color-secondary;
+    padding: 20px;
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        @include respond(small) {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 185px; // Adjusted size
+                height: auto;
+
+                @include respond(medium) {
+                    width: 150px;
+                }
+
+                @include respond(small) {
+                    width: 120px;
+                }
+            }
+        }
+
+        .copyright {
+            font-size: 16px;
+            font-family: $font-lilita-one;
+
+            @include respond(medium) {
+                font-size: 14px;
+            }
+
+            @include respond(small) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+/*
+footer.footer-login {
+    background-color: $color-primary;
+    color: $color-secondary;
+    text-align: end;
+    padding: 20px;
+    width: 100%;
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        .footer-logo img {
+            width: 185px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            font-family: $font-lilita-one;
+            font-size: 16px;
+        }
+
+        @include respond(medium) {
+            .footer-logo img {
+                width: 150px;
+            }
+
+            .copyright {
+                font-size: 14px;
+            }
+        }
+
+        @include respond(small) {
+            .footer-logo img {
+                width: 120px;
+            }
+
+            .copyright {
+                font-size: 12px;
+            }
+        }
+    }
+}
+*/
+footer.footer-mainpage {
+    background-color: $color-primary;
+    color: $color-secondary;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+
+    @include respond(medium) {
+        padding: 15px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        .footer-logo {
+            img {
+                width: 185px;
+                height: auto;
+                margin-bottom: 10px;
+
+                @include respond(medium) {
+                    width: 150px;
+                }
+            }
+        }
+
+        .footer-copyright {
+            font-family: $font-lilita-one;
+            font-size: 16px;
+
+            @include respond(medium) {
+                font-size: 14px;
+            }
+        }
+    }
+}

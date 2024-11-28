@@ -1,0 +1,218 @@
+@use "global" as *;
+
+
+header.header-index {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-primary;
+  color: $color-secondary;
+  padding: 20px 118px;
+  flex-wrap: wrap;
+  
+
+  a {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  .title {
+    font-family: $font-lilita-one;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 72px;
+
+    @include respond(medium) {
+      font-size: 48px;
+    }
+
+    @include respond(small) {
+      font-size: 36px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 200px;
+      height: 200px;
+
+      @include respond(medium) {
+        width: 0;
+        height: 0;
+      }
+
+      @include respond(small) {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+
+    @include respond(small) {
+      width: 100%;
+      justify-content: center;
+      margin-top: 20px; // Space out buttons on small screens
+    }
+
+    .button {
+      background-color: $color-secondary;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-white;
+      font-family: $font-lilita-one;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($color-white, 50%);
+      }
+
+      @include respond(small) {
+        padding: 8px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+header.header-login {
+  background-color: $color-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 0 20px;
+
+  .title {
+    font-family: $font-lilita-one;
+    font-size: 72px;
+    font-weight: bold;
+    color: $color-secondary;
+    text-align: center;
+
+    @include respond(medium) {
+      font-size: 48px;
+    }
+
+    @include respond(small) {
+      font-size: 32px;
+      text-align: center;
+      padding: 0 10px;
+    }
+  }
+}
+
+header.header-mainpage {
+  background-color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+
+  @include respond(medium) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-title {
+    font-family: $font-lilita-one;
+    font-size: 68px;
+    color: $color-secondary;
+    @include respond(medium) {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+  }
+  .header-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-title{
+      font-weight: bold;
+      @include respond(small){
+        font-size: 30px;
+      }
+    }
+
+    .header-image {
+      img {
+        width: 200px;
+        height: auto;
+  
+        @include respond(medium) {
+          width: 150px;
+        }
+  
+        @include respond(small) {
+          width: 0;
+        }
+      }
+    }
+
+    .header-logo {
+      nav { 
+        ul {
+          list-style-type: none;
+          display: flex;
+          padding: 4px;
+    
+          li {
+            margin-right: 10px;
+    
+            a {
+              text-decoration: none;
+              color: $color-secondary;
+              font-weight: bold;
+            }
+          }
+        }
+    
+        
+        @include respond(small) {
+          ul {
+            flex-direction: column; 
+            align-items: start;   
+            li {
+              margin-bottom: 8px;   
+              margin-right: 0;      
+            }
+          }
+        }
+      }
+    
+      @include respond(small) {
+        display: flex;            
+        flex-direction: column;   
+        align-items: center;      
+        margin-top: 10px;         
+        width: 100%;              
+      }
+    }
+    
+    
+    .header-content {
+      @include respond(small) {
+        flex-direction: column;  
+        align-items: center;   
+      }
+    }
+    
+    
+  }
+  
+}

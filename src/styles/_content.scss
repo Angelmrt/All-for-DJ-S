@@ -1,0 +1,227 @@
+@use "global" as *;
+
+main.content-index {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+
+    .content-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-color: $color-secondary-shadow;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        @include respond(medium) {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        img {
+            flex-shrink: 0;
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+
+            @include respond(medium) {
+                width: 70%;
+            }
+
+            @include respond(small) {
+                width: 100%;
+            }
+        }
+
+        .text {
+            flex: 1;
+            font-size: $base-font-size;
+            line-height: 1.5;
+            text-align: left;
+
+            @include respond(medium) {
+                font-size: 14px;
+                text-align: start;
+            }
+        }
+    }
+}
+
+
+main.content-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    gap: 40px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+
+    @include respond(small) {
+        gap: 20px;
+    }
+    .form-container {
+        background-color: $color-white-shadow;
+        padding: 20px;
+        border-radius: 8px;
+        width: 50%;
+        height: 500px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 0 auto; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      
+        .form-header {
+            margin-bottom: 30px;
+    
+            .form-title {
+                text-align: center;
+                font-family: $font-lilita-one;
+                font-size: 24px;
+                font-weight: bolder;
+                color: $color-secondary;
+            }
+        }
+    
+        .form-field {
+            margin-bottom: 20px;
+    
+            .label {
+                font-family: $font-lilita-one;
+                font-size: 24px;
+                color: $color-secondary;
+                margin-bottom: 10px;
+            }
+    
+            .input {
+                color: $color-secondary;
+                font-family: $font-roboto;
+                font-size: 16px;
+                padding: 10px;
+                border-radius: 5px;
+                text-align: center;
+    
+                @include respond(small) {
+                    font-size: 14px;
+                    padding: 8px;
+                }
+            }
+           
+        }
+    
+        .submit-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .submit-btn {
+                background-color: $color-secondary;
+                color: $color-white;
+                font-family: $font-lilita-one;
+                text-decoration: none;
+                width: 100px;
+                font-size: 16px;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 100%;
+    
+                &:hover {
+                    background-color: darken($color-secondary, 10%);
+                }
+    
+                @include respond(small) {
+                    font-size: 14px;
+                    padding: 10px;
+                }
+            }
+        }
+    
+        @include respond(medium) {
+            width: 350px;
+        }
+    
+        @include respond(small) {
+            width: 100%; // Full width on small screens
+            padding: 15px;
+        }
+    }
+}
+
+
+main.content-mainpage {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 40px;
+    flex-grow: 1;
+
+    @include respond(medium) {
+        padding: 20px;
+    }
+
+    .content-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 40px;
+        background: $color-secondary-shadow;
+        border-radius: 20px;
+        
+        
+
+        @include respond(medium) {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content-text {
+            color: $color-white;
+            font-family: $font-roboto;
+            font-size: $base-font-size;
+            line-height: 1.5;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: start; 
+            width: 50%;
+
+            @include respond(medium) {
+                width: 100%; 
+                text-align: start;
+                justify-content: start;
+            }
+            @include respond(small){
+                justify-content: start; 
+            }
+        }
+
+        .content-image {
+            img {
+                width: 500px;
+                height: auto;
+                border-radius: 10px;
+
+                @include respond(medium) {
+                    width:100%;
+                }
+
+                @include respond(small) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
