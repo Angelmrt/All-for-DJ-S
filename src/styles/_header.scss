@@ -76,7 +76,7 @@ header.header-index {
       cursor: pointer;
 
       &:hover {
-        background-color: darken($color-white, 50%);
+        background-color: $color-gray-light;
       }
 
       @include respond(small) {

@@ -137,7 +137,7 @@ main.content-login {
                 width: 100%;
     
                 &:hover {
-                    background-color: darken($color-secondary, 10%);
+                    background-color: $color-gray-light;
                 }
     
                 @include respond(small) {
